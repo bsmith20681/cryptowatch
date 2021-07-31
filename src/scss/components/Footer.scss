@@ -1,0 +1,10 @@
+@use "../variables/colors";
+
+.footer {
+  background-color: colors.$blue100;
+  padding: 15px;
+  &-text {
+    color: colors.$blue900;
+    text-align: center;
+  }
+}

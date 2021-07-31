@@ -1,0 +1,7 @@
+@use "../variables/colors";
+
+.home {
+  background-color: colors.$blue100;
+  display: flex;
+  justify-content: center;
+}

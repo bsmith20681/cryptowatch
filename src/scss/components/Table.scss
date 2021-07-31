@@ -1,0 +1,10 @@
+@use "../variables/colors";
+
+.table {
+  background-color: colors.$white;
+  padding: 15px;
+  margin: 15px;
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+}

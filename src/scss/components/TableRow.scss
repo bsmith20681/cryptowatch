@@ -1,0 +1,35 @@
+@use "../variables/colors";
+
+.tablerow {
+  box-shadow: 0 2px 2px -2px colors.$blue200;
+
+  &-name {
+    &_link {
+      text-decoration: none;
+      color: colors.$blue900;
+      transition: 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-symbol {
+    color: colors.$grey500;
+  }
+
+  &-image {
+    width: 25px;
+  }
+
+  &-price {
+    &_negative {
+      color: colors.$red600;
+    }
+
+    &_positive {
+      color: colors.$teal600;
+    }
+  }
+}
