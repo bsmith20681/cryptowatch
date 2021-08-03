@@ -50,7 +50,7 @@ const CoinInfo = ({ match }) => {
         })
       )
       .catch((error) => console.log(error));
-  }, []);
+  }, [url]);
 
   return (
     <Layout>
