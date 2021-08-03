@@ -3,7 +3,9 @@
 @use "components/Table";
 @use "components/TableRow";
 
+@use "globals/reset";
 @use "globals/typography";
 @use "globals/utilities";
 
 @use "pages/Home";
+@use "pages/CoinInfo";
