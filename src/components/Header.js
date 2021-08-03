@@ -17,14 +17,10 @@ const Header = () => {
 
         <ul className={"nav-link-list " + (mobileMenu ? "open" : "")}>
           <li className="nav-link">
-            <Link to="/" role="menu item">
-              Home
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="nav-link">
-            <Link to="/about-app" role="menu item">
-              About This App
-            </Link>
+            <Link to="/about-app">About This App</Link>
           </li>
         </ul>
       </nav>
@@ -43,7 +39,15 @@ const Header = () => {
         <div></div>
         <div></div>
       </div>
-      <a href="#" id={mobileMenu ? "overlay" : ""} onClick={toggleMenu}></a>
+      <a
+        role="button"
+        className="overlay-text"
+        href="/#"
+        id={mobileMenu ? "overlay" : ""}
+        onClick={toggleMenu}
+      >
+        close mobile menu with overlay
+      </a>
     </header>
   );
 };

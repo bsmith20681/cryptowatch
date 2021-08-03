@@ -56,6 +56,11 @@ nav {
   cursor: default;
 }
 
+/** error occurs when there is no text in link to close mobile menu by overlay so I placed in text and hiding it**/
+.overlay-text {
+  color: rgba(0, 0, 0, 0);
+}
+
 @media only screen and (max-width: 768px) {
   .nav-link-list {
     flex-direction: column;
