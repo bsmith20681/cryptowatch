@@ -1,4 +1,3 @@
-import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
 
 const TableRow = (props) => {
@@ -18,13 +17,16 @@ const TableRow = (props) => {
     market_cap,
   } = props;
   return (
-    <tr className="tablerow">
+    <tr className="tablerow" key={id}>
       <td>{number}</td>
       <td>
-        <img className="tablerow-image" src={image} alt={`${name} icon`} />
-        <Link className="tablerow-name_link" to={`/${id}`}>
-          {name} <span className="tablerow-symbol">{symbol.toUpperCase()}</span>
-        </Link>
+        <div className="tablerow-name">
+          <img className="tablerow-image" src={image} alt={`${name} icon`} />{" "}
+          <Link className="tablerow-name_link" to={`/${id}`}>
+            {name}{" "}
+            <span className="tablerow-symbol">{symbol.toUpperCase()}</span>
+          </Link>
+        </div>
       </td>
       <td>{formatter.format(current_price)}</td>
       <td>
@@ -38,7 +40,7 @@ const TableRow = (props) => {
           </p>
         )}
       </td>
-      <td>{formatter.format(market_cap)}</td>
+      <td className="market-cap">{formatter.format(market_cap)}</td>
     </tr>
   );
 };

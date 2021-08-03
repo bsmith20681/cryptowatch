@@ -4,10 +4,13 @@
   box-shadow: 0 2px 2px -2px colors.$blue200;
 
   &-name {
+    display: flex;
+    align-items: center;
     &_link {
       text-decoration: none;
       color: colors.$blue900;
       transition: 0.3s;
+      margin-left: 5px;
 
       &:hover {
         text-decoration: underline;

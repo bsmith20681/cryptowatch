@@ -11,6 +11,13 @@ const Footer = () => {
         </strong>{" "}
         All Rights Reserved
       </p>
+      <p className="footer-text">
+        Data is pulled from{" "}
+        <a href="https://www.coingecko.com/api/documentations/v3">
+          CoinGecko.com's
+        </a>{" "}
+        api
+      </p>
     </footer>
   );
 };

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-
-import Layout from "../components/Layout";
-import axios from "axios";
 import { Line as LineChart } from "react-chartjs-2";
+import axios from "axios";
 import moment from "moment";
 import parse from "html-react-parser";
+import Layout from "../components/Layout";
+import Loading from "../components/Loading";
 
 const CoinInfo = ({ match }) => {
   const [coinPriceHistory, setCoinPriceHistory] = useState("");
@@ -16,12 +16,6 @@ const CoinInfo = ({ match }) => {
   for (let i = 0; i < 12; i++) {
     lastTwelveMonths.push(moment().subtract(i, "months").format("MMM YY"));
   }
-
-  const formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 0,
-  });
 
   const data = {
     labels: lastTwelveMonths.reverse(),
@@ -61,13 +55,13 @@ const CoinInfo = ({ match }) => {
   return (
     <Layout>
       <div className="coinInfo">
-        <div className="container">
+        <div className="container pt-5">
           <div>
             {loading ? (
-              "loading"
+              <Loading />
             ) : (
-              <div>
-                <div style={{ maxWidth: 850, backgroundColor: "#fff" }}>
+              <div className="lineChart-container">
+                <div className="lineChart">
                   <LineChart
                     data={data}
                     width={600}

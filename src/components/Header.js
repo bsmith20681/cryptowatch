@@ -17,10 +17,14 @@ const Header = () => {
 
         <ul className={"nav-link-list " + (mobileMenu ? "open" : "")}>
           <li className="nav-link">
-            <Link to="/">Home</Link>
+            <Link to="/" role="menu item">
+              Home
+            </Link>
           </li>
           <li className="nav-link">
-            <Link to="#">About This App</Link>
+            <Link to="/about-app" role="menu item">
+              About This App
+            </Link>
           </li>
         </ul>
       </nav>

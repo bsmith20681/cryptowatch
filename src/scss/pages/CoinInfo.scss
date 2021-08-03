@@ -2,5 +2,15 @@
 
 .coinInfo {
   background-color: colors.$blue100;
-  height: 100vh;
+  min-height: 100vh;
+
+  &-container {
+    background-color: colors.$white;
+    padding: 15px;
+    margin-top: 15px;
+  }
+}
+
+.lineChart {
+  background-color: colors.$white;
 }

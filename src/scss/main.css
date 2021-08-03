@@ -124,6 +124,7 @@ nav {
 
 .table {
   background-color: #fff;
+  color: #102a43;
   padding: 15px;
   margin: 15px;
   max-width: 900px;
@@ -131,13 +132,23 @@ nav {
   text-align: left;
 }
 
+@media only screen and (max-width: 576px) {
+  .market-cap {
+    display: none;
+  }
+}
 .tablerow {
   box-shadow: 0 2px 2px -2px #d9e2ec;
+}
+.tablerow-name {
+  display: flex;
+  align-items: center;
 }
 .tablerow-name_link {
   text-decoration: none;
   color: #102a43;
   transition: 0.3s;
+  margin-left: 5px;
 }
 .tablerow-name_link:hover {
   text-decoration: underline;
@@ -153,6 +164,13 @@ nav {
 }
 .tablerow-price_positive {
   color: #27ab83;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -191,16 +209,29 @@ body {
     max-width: 1140px;
   }
 }
+.pt-5 {
+  padding-top: 3rem;
+}
+
 .home {
   background-color: #f0f4f8;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .coinInfo {
   background-color: #f0f4f8;
-  height: 100vh;
+  min-height: 100vh;
+}
+.coinInfo-container {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.lineChart {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

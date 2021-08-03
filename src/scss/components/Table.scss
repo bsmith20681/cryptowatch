@@ -2,9 +2,16 @@
 
 .table {
   background-color: colors.$white;
+  color: colors.$blue900;
   padding: 15px;
   margin: 15px;
   max-width: 900px;
   width: 100%;
   text-align: left;
+}
+
+@media only screen and (max-width: 576px) {
+  .market-cap {
+    display: none;
+  }
 }
